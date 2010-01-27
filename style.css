@@ -253,15 +253,6 @@ acronym, abbr, span.caps
     color: #4d4d85;
 	}
 	
-#subnav {
-	background:#DEE0ED none repeat scroll 0 0;
-	border-bottom:1px solid #999;
-	margin-top:0;
-	padding:10px 0;
-	text-align:left;
-	width:100%;
-	}
-	
 #subnav ul {
 	list-style-image:none;
 	list-style-position:outside;

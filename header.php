@@ -49,17 +49,7 @@ if ( empty($withcomments) && !is_single() ) {
             </ul>
         </div>
 	</div>
-</div>
-
-<!-- SUBNAV -->
-<?php if (in_category('articles') && !(is_home())) { ?>
-<div id="subnav">
-        <ul>
-	<?php wp_get_archives('type=monthly&cat=11&limit=4'); }?>
-        </ul>
-</div>
-<!-- END SUBNAV -->
-                     
+</div>                    
                       
 
 <div id="wrapper" class="clearfix">
