@@ -52,24 +52,6 @@ if ( empty($withcomments) && !is_single() ) {
 </div>
 
 <!-- SUBNAV -->
-<?php if (have_posts() && ($post->post_parent == '40' || $post->post_parent == '50' || is_page('about-us'))) : while (have_posts()) : the_post(); ?>
-<div id="subnav">
-    <?php
-        if($post->post_parent)
-            $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-        else
-            $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-        if ($children) { ?>
-            <ul>
-                <?php echo $children; ?>
-            </ul>
-        <?php }
-    ?>
-</div>
-<?php endwhile; endif; ?>
-<!-- END SUBNAV -->
-
-<!-- SUBNAV -->
 <?php if (in_category('articles') && !(is_home())) { ?>
 <div id="subnav">
         <ul>
