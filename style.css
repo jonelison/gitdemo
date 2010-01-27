@@ -1,0 +1,865 @@
+/*
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.6
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+Tags: blue, custom header, fixed width, two columns, widgets
+
+	Kubrick v1.5
+	 http://binarybonsai.com/kubrick/
+
+	This theme was designed and built by Michael Heilemann,
+	whose blog you will find at http://binarybonsai.com/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+/* Begin Typography & Colors */
+a,
+a:active,
+a:visited {
+	color: #d04c04;
+	text-decoration: none;
+	}
+	
+a:hover {
+	color: #333;
+	}
+
+body {
+	background: #F5F5F5 url('http://lvasce.org/wip/wp-content/themes/default/images/bg_wrapper.jpg') repeat-x top center;	
+	font-size: 13px; /* Resets 1em to 10px */
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	line-height: 18px;
+	color: #333;
+	text-align: left;
+	}
+
+#header {
+	background: url('http://lvasce.org/wip/wp-content/themes/default/images/bg_header.jpg') repeat-x top center;
+	position: relative;
+	}
+
+#headerimg 	{
+	margin: 7px 9px 0;
+	height: 192px;
+	width: 740px;
+	}
+
+#content {
+	font-size: 1.2em;
+	}`
+
+.widecolumn .entry p {
+	font-size: 1.05em;
+	}
+
+.widecolumn {
+	line-height: 1.6em;
+	}
+
+.narrowcolumn .postmetadata {
+	text-align: center;
+	}
+
+.entry p {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 20px;
+	text-align: left;
+	}
+
+.thread-alt {
+	background-color: #f8f8f8;
+}
+.thread-even {
+	background-color: white;
+}
+.depth-1 {
+border: 1px solid #ddd;
+}
+
+.even, .alt {
+
+	border-left: 1px solid #ddd;
+}
+
+#footer {
+	border: none;
+	}
+
+small {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 11px;
+	line-height: 16px;
+	}
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+
+#headerimg .description {
+	font-size: 1.2em;
+	text-align: center;
+	}
+
+#sidebar h2 {
+	font-size: 12px;
+	color: #666;
+	}
+	
+#randompostsfromcategory-3 p {
+	color: #666;
+	margin-top: -5px;
+	}
+
+#sidebar p,
+#sidebar a {
+	font-size: 11px;
+	}
+
+.entry p a:visited {
+	color: #b85b5a;
+	}
+
+.sticky {
+	background: #f7f7f7;
+	padding: 0 10px 10px;
+	}
+.sticky h2 {
+	padding-top: 10px;
+	}
+
+.commentlist li, #commentform input, #commentform textarea {
+	font: 0.9em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+.commentlist li ul li {
+	font-size: 1em;
+}
+
+.commentlist li {
+	font-weight: bold;
+}
+
+.commentlist li .avatar { 
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	background: #fff;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+	}
+
+.commentlist p {
+	color: #333;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+	text-transform: none;
+	}
+
+#commentform p {
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+#sidebar {
+	font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	}
+
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike {
+	color: #777;
+	}
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+
+.archiveDropDown {
+	margin-top: 50px;
+	}
+
+#logo {
+	text-align: left;
+	padding: 93px 0 0 8px;
+	margin: 0;
+	}
+
+#nav {
+	float: left;
+	margin: 48px 0 0 3px;
+	padding: 0;
+	}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+	}
+
+#nav ul li {
+	display: inline-block;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;	
+	list-style: none;
+	border-right: #61678a 1px solid;
+	margin-left: -4px;
+	}
+	
+#nav a,
+#nav a:active {
+	padding: 9px 9px 5px;
+	display: block;	
+	color: #FFF;
+	margin: 0;
+	}
+	
+#nav a:hover {
+	color: #4d4d85;
+	background-color: #DEE0ED;
+	text-decoration: none;
+	opacity: .75;
+	filter: alpha(opacity=75); 
+	}
+	
+.nav_current {	
+    background: #DEE0ED;
+	}
+#nav .nav_current a {
+    color: #4d4d85;
+	}
+	
+#subnav {
+	background:#DEE0ED none repeat scroll 0 0;
+	border-bottom:1px solid #999;
+	margin-top:0;
+	padding:10px 0;
+	text-align:left;
+	width:100%;
+	}
+	
+#subnav ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0 auto;
+	padding:0;
+	position:relative;
+	width:960px;
+	}
+	
+#subnav ul li {
+	display: inline;
+	margin-right: 7px;
+	margin-left: 5px;
+	}
+	
+#subnav a,
+#subnav a:active,
+#subnav a:visited {
+	font-size: 13px;
+	padding: 6px 6px;
+	}
+	
+#subnav a:hover {
+	color: #333;
+	background: #EBEDF5;
+	}
+
+#subnav ul li.current_page_item a,
+#subnav ul li.current_page_item a:active,
+#subnav ul li.current_page_item a:visited {
+	font-size: 13px;
+	color: #333;
+	background: #EBEDF5;	
+	}
+	
+
+body {
+	margin: 0;
+	padding: 0;
+	}
+
+#wrapper {
+	background: url('http://lvasce.org/wip/wp-content/themes/default/images/bg_fauxColumn.gif') repeat-y top center;
+	margin: 0 auto;
+	padding-top: 0;
+	width: 960px;
+	height: 100%;
+	}
+
+#header {
+	margin: 0;
+	padding: 0;
+	height: 297px;
+	}
+
+#headerimg {
+	margin: 0 auto;
+	width: 960px;
+	}
+
+.narrowcolumn {
+	background: #FFF url('http://lvasce.org/wip/wp-content/themes/default/images/bg_mainColumn.jpg') no-repeat top center;
+	float: left;
+	padding: 0 25px 50px;
+	margin: -1px 0 0 0;
+	min-height: 350px;
+	text-align: left;
+	width: 540px;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+
+.post {
+	margin: 50px 0 0 0;
+	padding-bottom: 25px;
+	text-align: left;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+.widecolumn .postmetadata {
+	margin: 30px 0;
+	}
+
+.widecolumn .smallattachment {
+	text-align: center;
+	float: left;
+	width: 128px;
+	margin: 5px 5px 5px 0px;
+}
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+#footer {
+	background: url('http://lvasce.org/wip/wp-content/themes/default/images/bg_footer.jpg') repeat-x top center;
+	height: 134px;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	}
+
+#footer p {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	}
+/* End Structure */
+
+
+
+/*	Begin Headers */
+h1 {
+	padding-top: 70px;
+	margin: 0;
+	}
+
+h2 {
+	margin: 50px 0 0;
+	line-height: 26px;
+	font-size: 22px;
+	}
+
+h2.pagetitle {
+	margin-top: 50px;
+	font-size: 20px;
+}
+
+#sidebar h2 {
+	margin: 5px 0 0;
+	padding: 0;
+	}
+
+h3 {
+	border-top:1px solid #CCCCCC;
+	font-size:16px;
+	margin-top:50px;
+	padding-top:50px;
+	}
+
+h3.comments {
+	padding: 0;
+	margin: 40px auto 20px ;
+	}
+	
+
+.fn { /* Author name in comments */
+	font-size:13px;
+	}
+
+.comment-meta a {
+	font-size: 11px;
+	color: #666;=
+	}
+/* End Headers */
+
+
+
+/* Begin Images */
+p img {
+	padding: 7px;
+	border: 1px solid #CCC;
+	display: inline;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.alignright {
+	float: right;
+	margin: 15px 0 15px 15px;	
+	}
+
+.alignleft {
+	float: left;
+	margin: 15px 15px 15px 0;
+	}
+/* End Images */
+
+
+
+/* Begin Lists
+
+	Special stylized non-IE bullets
+	Do not work in Internet Explorer, which merely default to normal bullets. */
+	
+.post-meta {
+	list-style: none;
+	list-style-image: none;
+	}
+
+.post-meta-key {
+	color: #666;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: block;
+	}
+
+.entry ul li:before, #sidebar ul ul li:before {
+	content: "\00BB \0020";
+	}
+
+.entry ol {
+	padding: 0 0 0 35px;
+	margin: 0;
+	}
+
+.entry ol li {
+	margin: 0;
+	padding: 0;
+	}
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style-type: none;
+	list-style-image: none;
+	}
+
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #999;
+	}
+	
+#sidebar ul li ul li {
+	border-bottom: none;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 10px;
+	}
+
+#sidebar ul ul ul, #sidebar ul ol {
+	margin: 0 0 0 10px;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+label {
+	font-size: 11px;
+	color: #999;
+	}
+	
+.narrowcolumn input[type="text"] {
+	width: 300px;
+	padding: 5px;
+	border: 1px solid #999;
+	}
+	
+.narrowcolumn textarea {
+	width: 300px;
+	padding: 5px;
+	border: 1px solid #999;	
+	}
+	
+
+#searchform {
+	margin: 10px auto;
+	padding: 5px 3px;
+	text-align: center;
+	}
+
+#sidebar #searchform #s {
+	width: 108px;
+	padding: 2px;
+	}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align: left;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform {
+	margin: 5px 10px 0 0;
+	}
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+#respond:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+#commentform #submit {
+	margin: 0 0 5px auto;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 10px;
+	padding: 5px 5px 10px 10px;
+	list-style: none;
+
+	}
+.commentlist li ul li { 
+	margin-right: -5px;
+	margin-left: 10px;
+}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+}
+.children { padding: 0; }
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar
+{
+	float: left;
+	padding: 0;
+	margin: 50px 0 0 50px;
+	width: 200px;
+	text-align: left;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 178px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	display: block;	
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	display: block;	
+	}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+	}
+
+#wp-calendar td {
+	padding: 5px 0;
+	text-align: center;
+	}
+
+#wp-calendar t:hover { /* Doesn't work in IE */
+	background-color: #999; 
+	border: 1px solid #666;
+	}
+	
+#wp-calendar {
+	background: #FFF;
+	border:1px solid #CCCCCC;
+	padding: 10px;
+	width: 178px;
+	}
+
+#wp-calendar a {
+	color: #d04c04;
+	text-decoration: none;
+	}
+
+#wp-calendar caption {
+	font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	text-align: center;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}	
+	
+#today {
+	border: none;
+	background: #CCC;
+	}
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+	
+.screen-reader-text {
+     position: absolute;
+     left: -1000em;
+}
+
+hr {
+	background: url('http://lvasce.org/wip/wp-content/themes/default/images/hr.gif') no-repeat top center;
+	width: 538px;
+	height: 8px;
+	border: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 60px;
+	}
+/* End Various Tags & Classes*/
+
+
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End captions */
+
+
+/* CLEARFIX */
+.clearfix:after
+{
+ content: "."; 
+ display: block; 
+ height: 0; 
+ clear: both; 
+ visibility: hidden;
+}
+
+* html>body .clearfix
+{
+ display: inline-block;  /* doesn't validate */
+ width: 100%;
+}
+
+* html .clearfix
+{
+ /* Hide from IE-mac \*/
+ height: 1%;
+ /* End hide from IE-mac */
+}
+
+
+/* "Daisy, Daisy, give me your answer do. I'm half crazy all for the love of you.
+	It won't be a stylish marriage, I can't afford a carriage.
+	But you'll look sweet upon the seat of a bicycle built for two." */
